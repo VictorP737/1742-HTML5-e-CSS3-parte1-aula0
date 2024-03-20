@@ -1,0 +1,305 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header{
+    background-color: #BBBBBB;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*940/1344 para ocupar el 70% del espacio en pantallas 1280p/1920p*/
+/*para centrar el logo y el menu de navegacion*/
+.box{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.products{
+    width: 90%;
+    margin: 0  auto;
+    padding: 50px;
+}
+
+.products li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 70px 20px;
+    /*para que no supere el borde, se agrega los 20px a los 30%*/
+    box-sizing: border-box ;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.products li:hover {
+    border-color: #c78c19;
+    font-size: 33px;
+}
+
+.products li:active {
+    border-color: #088c19;
+}
+
+.products h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.products li:hover h2{
+    font-size: 33px;
+}
+
+.despcriptionProduct{
+    font-size: 28px;
+}
+
+.priceProduct{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 60px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/* CONTACTOS */
+.contact{
+    width: 90%;
+    margin: 0 auto;
+}
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 30px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 30px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 7px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.1) rotate(1deg);
+}
+
+table {
+    margin: 40px 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: solid 1px #000000;
+    padding: 8px 15px;
+}
+
+
+/*css para home*/
+
+
+/*elemento > hijo, para cuando se quiere usar los hijos: mainpart > p*/
+/*<h2>
+<section>
+    <h2>
+    <p>
+    <p>
+    <h2>
+</section> si se quiere elegir el h2: section > p +h2*/
+/*img + p, el + sirve a la hora de aplicar el efecto al primer parrafo que viene despues de la imagen */
+/*img ~ p, para elegir todos los parrafos siguientes*/
+/*para excluir un elemento utilizamos .mainpart p:not(mission)*/
+
+.banner{
+    width: 100%;
+}
+
+.mainPart {
+    padding: 3em 0;
+    background: #FFFFFF;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.maintittle{
+    text-align: center;
+    /* amplia 2 veces al tamano de la fuente normal */
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.maintittle::before {
+    content: "[";
+}
+
+.maintittle::after {
+    content: "]";
+}
+
+.mainPart p{
+    margin: 0 0 1em;
+}
+
+.mainPart strong {
+    font-weight: bold;
+}
+
+.mainPart em {
+    font-style: italic;
+}
+
+.untensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+    /*inset 0 0 5px si se quiere la sombra hacia dentro, text-shadow para textos*/
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.map {
+    padding: 3em 0;
+    background: linear-gradient(#FFFFFF, #888888);
+}
+
+.map p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapcontent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.diferenciales {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.diferencialescontent{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.diferencialeslist{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    line-height: 1.5;
+}
+
+.items::before {
+    content: "✦";
+}
+
+/*pseudoclase, modifica el elemento elegido, en este caso el primero de la lista "first child*/
+.items:nth-child(1) {
+    text-decoration: underline;
+}
+
+.imgdiferenciales {
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 0 10px 10px #000000;
+}
+
+.imgdiferenciales:hover {
+    opacity: 30%;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width:480px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .box .mainPart, .mapcontent, .diferencialescontent, .video {
+        width: auto;
+    }
+
+    .diferencialeslist, .imgdiferenciales {
+        width: 100%;
+    }
+}
